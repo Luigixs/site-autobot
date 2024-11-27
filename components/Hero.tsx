@@ -32,7 +32,10 @@ export function Hero() {
           </h1>
           
           <div className="relative max-w-3xl mx-auto aspect-video bg-black/50 rounded-lg mb-8">
-            <button className="absolute inset-0 flex items-center justify-center">
+            <button 
+              className="absolute inset-0 flex items-center justify-center" 
+              aria-label="Assistir vídeo"
+            >
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
                 <Play className="w-8 h-8 text-white" />
               </div>
@@ -47,11 +50,11 @@ export function Hero() {
         <div className="bg-white rounded-xl p-8 max-w-4xl mx-auto">
           <h2 className="text-black text-2xl md:text-3xl font-bold text-center mb-4">
             Mudando a vida de<br />
-            empreendedores Em todo brasil
+            empreendedores em todo o Brasil
           </h2>
           
           <p className="text-gray-600 text-center mb-8">
-            Junte-se a mais de 10.000 empresas que estão diariamente utilizando o BotConversa para automatizar seu atendimento e vendas no WhatsApp todos os dias.
+            Junte-se a mais de 10.000 empresas que estão utilizando o BotConversa para automatizar seu atendimento e vendas no WhatsApp.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -66,12 +69,15 @@ export function Hero() {
 
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center mb-12">
-            O que é Possível Fazer No BotConversa?
+            O que é possível fazer no BotConversa?
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
+              <div 
+                key={index} 
+                className="bg-white/10 rounded-lg p-6 text-center hover:bg-white/20 transition-colors"
+              >
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <p className="text-sm">{feature.title}</p>
               </div>

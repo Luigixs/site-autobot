@@ -12,8 +12,9 @@ export function ProductFeatures() {
             <Image
               src="/Marketing.png"
               alt="Marketing de Conversa"
-              width={400}
-              height={400}
+              width={800}
+              height={600}
+              layout="responsive"
               className="rounded-lg shadow-lg"
             />
           </div>
@@ -46,8 +47,9 @@ export function ProductFeatures() {
                 <Image
                   src="/Flow-GIF.gif"
                   alt="Interface do Bot"
-                  width={400}
-                  height={400}
+                  width={800}
+                  height={600}
+                  layout="responsive"
                   className="rounded-lg"
                 />
               </div>
@@ -58,13 +60,13 @@ export function ProductFeatures() {
         {/* Integração Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            
             <div className="bg-[#ff4b03] rounded-lg p-12 flex items-center justify-center">
               <Image
                 src="/integraçoes.gif"
-                alt="Logo Integração"
+                alt="Integração com plataformas"
                 width={400}
                 height={400}
+                layout="intrinsic"
                 className="w-32 h-32"
               />
             </div>
@@ -73,7 +75,7 @@ export function ProductFeatures() {
             <p className="text-gray-600">Conecte com os melhores do mercado</p>
             <h3 className="text-2xl font-bold">Aumente Suas Vendas Recuperando Carrinhos, Boletos e Muito Mais</h3>
             <p className="text-gray-600">
-              Você pode pode conectar a sua plataforma de vendas ao BotConversa para automatizar ainda mais as conversas personalizadas e aumentar suas vendas em pelo menos 30%.
+              Você pode conectar a sua plataforma de vendas ao BotConversa para automatizar ainda mais as conversas personalizadas e aumentar suas vendas em pelo menos 30%.
             </p>
           </div>
         </div>
