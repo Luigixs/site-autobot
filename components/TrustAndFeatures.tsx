@@ -7,11 +7,11 @@ export function TrustAndFeatures() {
         {/* Trust Banner */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-2">Confiado Por 10.000+ Empresas</h2>
-          <p className="text-gray-600">mais de 100 milhões de conversas com clientes</p>
+          <p className="text-gray-600">Mais de 100 milhões de conversas com clientes</p>
           
           <div className="max-w-3xl mx-auto mt-8 text-gray-600 text-sm">
             <p className="mb-8">
-              Faço parte dessas empresas, e foi fácil! Fui encarregado de desenvolver o nosso BOT, meu chefe acreditou que com o BOT, iríamos poder mexer bem mais rápido, pelo simples motivo dele automatizar muitos processos que se tornam demorados, através do BOT consigo filtrar o nosso público e também determinamos nossos leads facilmente. Não chutei certo de investir no BOT, mas Acertei, com videos 24h hrs para desvendar ainda mais o nosso atendimento e não se tornar algo robótico. Acredito que tem ajudado não só a mim, mas para toda a minha equipe, estamos muito felizes com os resultados.
+              Faço parte dessas empresas, e foi fácil! Fui encarregado de desenvolver o nosso BOT, meu chefe acreditou que com o BOT, iríamos poder mexer bem mais rápido, pelo simples motivo dele automatizar muitos processos que se tornam demorados. Através do BOT consigo filtrar o nosso público e também determinamos nossos leads facilmente. Não chutei certo de investir no BOT, mas Acertei, com vídeos 24h para desvendar ainda mais o nosso atendimento e não se tornar algo robótico. Acredito que tem ajudado não só a mim, mas para toda a minha equipe. Estamos muito felizes com os resultados.
             </p>
           </div>
 
@@ -19,7 +19,7 @@ export function TrustAndFeatures() {
           <div className="flex items-center justify-center gap-3 mb-16">
             <Image
               src="/placeholder.svg?height=40&width=40"
-              alt="User Avatar"
+              alt="Avatar de Usuário"
               width={40}
               height={40}
               className="rounded-full"
@@ -36,15 +36,17 @@ export function TrustAndFeatures() {
           <div className="relative">
             <Image
               src="/GIF-Bate-papo.gif"
-              alt="Multiple Agents Interface"
+              alt="Interface de Agentes Múltiplos"
               width={400}
               height={600}
               className="rounded-lg shadow-xl"
             />
-          
           </div>
+
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Coloque Todo Seu Time Comercial Para Atender Sem Confusão</h3>
+            <h3 className="text-2xl font-bold">
+              Coloque Todo Seu Time Comercial Para Atender Sem Confusão
+            </h3>
             <p className="text-gray-600">
               Com o BotConversa você pode ter múltiplos agentes, sem nenhum custo adicional, atendendo e vendendo ao mesmo tempo utilizando um único número.
             </p>
@@ -63,7 +65,7 @@ export function TrustAndFeatures() {
           <div className="relative">
             <Image
               src="/GIF-Envios-Em-Massa.gif"
-              alt="Mass Messaging Interface"
+              alt="Interface de Envio em Massa"
               width={400}
               height={600}
               className="rounded-lg shadow-xl"
@@ -74,4 +76,3 @@ export function TrustAndFeatures() {
     </section>
   )
 }
-
