@@ -27,6 +27,16 @@ export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
 
+  // Alterar o título da página ao montar o componente
+  useEffect(() => {
+    document.title = "Página Hero - BotConversa"; // Alterando o título da página
+
+    // Função de limpeza (caso queira restaurar o título ao desmontar)
+    return () => {
+      document.title = "Página Inicial"; // Título original quando o componente for desmontado
+    }
+  }, []); // O array vazio garante que isso será executado apenas uma vez, no mount
+
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing')
     pricingSection?.scrollIntoView({ behavior: 'smooth' })
@@ -119,4 +129,3 @@ export function Hero() {
     </section>
   )
 }
-
