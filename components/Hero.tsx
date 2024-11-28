@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Play } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
@@ -59,7 +58,7 @@ export function Hero() {
               className="w-full h-full rounded-lg object-cover"
               onClick={toggleVideo}
             >
-              <source src="/video.mp4" type="video/mp4" />
+              <source src="/O que é um robô.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             {!isPlaying && (

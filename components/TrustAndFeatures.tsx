@@ -37,17 +37,12 @@ export function TrustAndFeatures() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative w-[400px] h-[400px] mx-auto">
             <Image
-              src="/placeholder.svg"
+              src="/GIF-Bate-papo.gif"
               alt="Multiple Agents Interface"
               width={400}
               height={400}
               className="rounded-lg shadow-xl object-cover"
             />
-            <div className="absolute top-4 left-4 flex gap-2 z-10">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Múltiplos</span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Agentes</span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">1 Número</span>
-            </div>
           </div>
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Coloque Todo Seu Time Comercial Para Atender Sem Confusão</h3>
@@ -68,16 +63,12 @@ export function TrustAndFeatures() {
           </div>
           <div className="relative w-[400px] h-[400px] mx-auto">
             <Image
-              src="/placeholder.svg"
+              src="/GIF-Envios-Em-Massa.gif"
               alt="Mass Messaging Interface"
               width={400}
               height={400}
               className="rounded-lg shadow-xl object-cover"
             />
-            <div className="absolute bottom-4 left-4 flex gap-2 z-10">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Envios</span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Em Massa</span>
-            </div>
           </div>
         </div>
       </div>

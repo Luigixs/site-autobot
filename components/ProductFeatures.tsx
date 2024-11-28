@@ -9,12 +9,8 @@ export function ProductFeatures() {
         {/* Marketing e Vendas Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative w-[400px] h-[400px] mx-auto">
-            <div className="absolute top-4 left-4 flex gap-2 z-10">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Vendas</span>
-            </div>
             <Image
-              src="/image.png"
+              src="/Marketing.png"
               alt="Marketing de Conversa"
               width={400}
               height={400}
@@ -62,13 +58,9 @@ export function ProductFeatures() {
         {/* Integração Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-[400px] h-[400px] mx-auto">
-            <div className="absolute top-4 left-4 flex gap-2 z-10">
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Integração</span>
-              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Hotmart</span>
-            </div>
             <div className="bg-[#ff4b03] rounded-lg p-12 flex items-center justify-center h-full">
               <Image
-                src="/Integrações-GIF-Final.gif"
+                src="/integraçoes.gif"
                 alt="Logo Integração"
                 width={400}
                 height={400}

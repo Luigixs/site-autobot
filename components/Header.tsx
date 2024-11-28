@@ -16,8 +16,8 @@ export function Header() {
           <Image 
             src="/logo.png" 
             alt="AutomatikLabs" 
-            width={40} 
-            height={40}
+            width={45} 
+            height={45}
             className="brightness-0 invert"
           />
         </Link>

@@ -125,10 +125,10 @@ export function Pricing() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/image.png"
+                src="/garantia-de-7-dias-1.png"
                 alt="7 dias garantia ou seu dinheiro de volta"
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="object-contain"
               />
             </div>
