@@ -8,14 +8,17 @@ export function ProductFeatures() {
         
         {/* Marketing e Vendas Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-          <div className="relative">
+          <div className="relative w-[400px] h-[400px] mx-auto">
+            <div className="absolute top-4 left-4 flex gap-2 z-10">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Vendas</span>
+            </div>
             <Image
-              src="/Marketing.png"
+              src="/image.png"
               alt="Marketing de Conversa"
-              width={800}
-              height={600}
-              layout="responsive"
-              className="rounded-lg shadow-lg"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-lg object-cover"
             />
           </div>
           <div className="space-y-4">
@@ -36,9 +39,9 @@ export function ProductFeatures() {
               Com a nossa interface visual com tecnologia "arraste e solte", você pode facilmente construir e automatizar conversas interativas para o WhatsApp que geram mais conversões e vendas para o seu negócio.
             </p>
           </div>
-          <div className="relative order-1 md:order-2">
-            <div className="bg-white rounded-lg shadow-xl p-4">
-              <div className="bg-gray-50 rounded-lg p-4">
+          <div className="relative w-[400px] h-[400px] mx-auto order-1 md:order-2">
+            <div className="bg-white rounded-lg shadow-xl p-4 h-full">
+              <div className="bg-gray-50 rounded-lg p-4 h-full">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-2 h-2 bg-red-500 rounded-full" />
                   <div className="w-2 h-2 bg-yellow-500 rounded-full" />
@@ -47,10 +50,9 @@ export function ProductFeatures() {
                 <Image
                   src="/Flow-GIF.gif"
                   alt="Interface do Bot"
-                  width={800}
-                  height={600}
-                  layout="responsive"
-                  className="rounded-lg"
+                  width={400}
+                  height={400}
+                  className="rounded-lg object-contain"
                 />
               </div>
             </div>
@@ -59,15 +61,18 @@ export function ProductFeatures() {
 
         {/* Integração Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="bg-[#ff4b03] rounded-lg p-12 flex items-center justify-center">
+          <div className="relative w-[400px] h-[400px] mx-auto">
+            <div className="absolute top-4 left-4 flex gap-2 z-10">
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Integração</span>
+              <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Hotmart</span>
+            </div>
+            <div className="bg-[#ff4b03] rounded-lg p-12 flex items-center justify-center h-full">
               <Image
-                src="/integraçoes.gif"
-                alt="Integração com plataformas"
+                src="/Integrações-GIF-Final.gif"
+                alt="Logo Integração"
                 width={400}
                 height={400}
-                layout="intrinsic"
-                className="w-32 h-32"
+                className="object-contain"
               />
             </div>
           </div>
@@ -75,7 +80,7 @@ export function ProductFeatures() {
             <p className="text-gray-600">Conecte com os melhores do mercado</p>
             <h3 className="text-2xl font-bold">Aumente Suas Vendas Recuperando Carrinhos, Boletos e Muito Mais</h3>
             <p className="text-gray-600">
-              Você pode conectar a sua plataforma de vendas ao BotConversa para automatizar ainda mais as conversas personalizadas e aumentar suas vendas em pelo menos 30%.
+              Você pode pode conectar a sua plataforma de vendas ao BotConversa para automatizar ainda mais as conversas personalizadas e aumentar suas vendas em pelo menos 30%.
             </p>
           </div>
         </div>
@@ -83,3 +88,4 @@ export function ProductFeatures() {
     </section>
   )
 }
+

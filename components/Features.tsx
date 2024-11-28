@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
 
 const features = [
   "Integração com WhatsApp",
@@ -17,7 +17,7 @@ export function Features() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-3">
-              <Check className="text-green-500 flex-shrink-0" />
+              <CheckCircle className="text-green-500 flex-shrink-0" />
               <span>{feature}</span>
             </div>
           ))}
@@ -26,3 +26,4 @@ export function Features() {
     </section>
   )
 }
+

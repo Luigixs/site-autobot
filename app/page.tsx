@@ -6,20 +6,24 @@ import { TrustAndFeatures } from '@/components/TrustAndFeatures'
 import { Pricing } from '@/components/Pricing'
 import { FAQ } from '@/components/FAQ'
 import { Footer } from '@/components/Footer'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         <Hero />
         <Features />
         <ProductFeatures />
         <TrustAndFeatures />
-        <Pricing />
+        <section id="pricing">
+          <Pricing />
+        </section>
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

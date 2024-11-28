@@ -1,5 +1,9 @@
+'use client'
+
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Play } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 
 const stats = [
   { value: "100+ Milhões", label: "Mensagens trocadas" },
@@ -21,6 +25,25 @@ const features = [
 ]
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing')
+    pricingSection?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+      setIsPlaying(!isPlaying)
+    }
+  }
+
   return (
     <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20">
       <div className="container mx-auto px-4">
@@ -31,17 +54,30 @@ export function Hero() {
           </h1>
           
           <div className="relative max-w-3xl mx-auto aspect-video bg-black/50 rounded-lg mb-8">
-            <button 
-              className="absolute inset-0 flex items-center justify-center" 
-              aria-label="Assistir vídeo"
+            <video
+              ref={videoRef}
+              className="w-full h-full rounded-lg object-cover"
+              onClick={toggleVideo}
             >
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                <Play className="w-8 h-8 text-white" />
-              </div>
-            </button>
+              <source src="/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {!isPlaying && (
+              <button 
+                className="absolute inset-0 flex items-center justify-center"
+                onClick={toggleVideo}
+              >
+                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                  <Play className="w-8 h-8 text-white" />
+                </div>
+              </button>
+            )}
           </div>
 
-          <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full text-lg">
+          <Button 
+            onClick={scrollToPricing}
+            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full text-lg"
+          >
             Começar Agora
           </Button>
         </div>
@@ -49,11 +85,11 @@ export function Hero() {
         <div className="bg-white rounded-xl p-8 max-w-4xl mx-auto">
           <h2 className="text-black text-2xl md:text-3xl font-bold text-center mb-4">
             Mudando a vida de<br />
-            empreendedores em todo o Brasil
+            empreendedores Em todo brasil
           </h2>
           
           <p className="text-gray-600 text-center mb-8">
-            Junte-se a mais de 10.000 empresas que estão utilizando o BotConversa para automatizar seu atendimento e vendas no WhatsApp.
+            Junte-se a mais de 10.000 empresas que estão diariamente utilizando o BotConversa para automatizar seu atendimento e vendas no WhatsApp todos os dias.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -68,15 +104,12 @@ export function Hero() {
 
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center mb-12">
-            O que é possível fazer no BotConversa?
+            O que é Possível Fazer No BotConversa?
           </h2>
           
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="bg-white/10 rounded-lg p-6 text-center hover:bg-white/20 transition-colors"
-              >
+              <div key={index} className="bg-white/10 rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <p className="text-sm">{feature.title}</p>
               </div>
@@ -87,3 +120,4 @@ export function Hero() {
     </section>
   )
 }
+
