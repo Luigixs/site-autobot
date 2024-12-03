@@ -1,9 +1,31 @@
 import { Check } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import Link from 'next/link'
-import Image from 'next/image';
+import Image from 'next/image'
 
 const plans = [
+  {
+    name: "Teste Grátis",
+    price: "0",
+    period: "Por 7 Dias",
+    description: "Experimente TODAS as funcionalidades do plano PRO gratuitamente por 7 dias!",
+    features: [
+      "WhatsApp",
+      "Contatos ilimitados",
+      "Campanhas ilimitadas",
+      "Envios ilimitados",
+      "Agentes ilimitados",
+      "Robôs ilimitados",
+      "Palavras Chave ilimitadas",
+      "Sequências ilimitadas",
+      "Integração Zaper",
+      "API para desenvolvedores",
+      "Webhook",
+      "Acesso total por 7 dias",
+      "Sem compromisso"
+    ],
+    highlight: true,
+    link: "https://checkaout.vercel.app/"
+  },
   {
     name: "Mensal STARTER",
     price: "199",
@@ -17,7 +39,8 @@ const plans = [
       "Robôs ilimitados",
       "Palavras Chave ilimitadas",
       "Sequências ilimitadas"
-    ]
+    ],
+    link: "https://chk.eduzz.com/39ZBPOOE9E"
   },
   {
     name: "Mensal PRO",
@@ -35,7 +58,8 @@ const plans = [
       "Integração Zaper",
       "API para desenvolvedores",
       "Webhook"
-    ]
+    ],
+    link: "https://chk.eduzz.com/E0DB4PPE91"
   },
   {
     name: "Anual PRO",
@@ -54,7 +78,8 @@ const plans = [
       "Integração Zaper",
       "API para desenvolvedores",
       "Webhook"
-    ]
+    ],
+    link: "https://chk.eduzz.com/39VJ2ZZ59R"
   }
 ]
 
@@ -71,17 +96,23 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-20">
           {plans.map((plan, index) => (
             <div
               key={index}
               className={`relative bg-white rounded-lg p-8 ${
-                plan.recommended ? 'shadow-xl border-green-500 border-2' : 'shadow-lg'
+                plan.recommended ? 'shadow-xl border-green-500 border-2' :
+                plan.highlight ? 'shadow-xl border-blue-500 border-2' : 'shadow-lg'
               }`}
             >
               {plan.recommended && (
                 <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-1 rounded-full transform rotate-12">
                   Recomendado
+                </div>
+              )}
+              {plan.highlight && (
+                <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-1 rounded-full transform rotate-12">
+                  Teste Grátis
                 </div>
               )}
               <div className="text-center mb-8">
@@ -91,6 +122,9 @@ export function Pricing() {
                   <span className="text-5xl font-bold">{plan.price}</span>
                 </div>
                 <span className="text-gray-600">{plan.period}</span>
+                {plan.description && (
+                  <p className="mt-4 text-sm text-blue-600 font-semibold">{plan.description}</p>
+                )}
               </div>
 
               <ul className="space-y-4 mb-8">
@@ -102,11 +136,16 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link href={`/checkout?plan=${encodeURIComponent(plan.name)}`}>
-                <Button className="w-full bg-black hover:bg-gray-800 text-white">
-                  COMPRAR AGORA
+              <a 
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button className={`w-full ${plan.highlight ? 'bg-blue-500 hover:bg-blue-600' : 'bg-black hover:bg-gray-800'} text-white`}>
+                  {plan.highlight ? 'COMEÇAR TESTE GRÁTIS' : 'COMPRAR AGORA'}
                 </Button>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -125,10 +164,10 @@ export function Pricing() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/garantia-de-7-dias-1.png"
+                src="/image.png"
                 alt="7 dias garantia ou seu dinheiro de volta"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 className="object-contain"
               />
             </div>

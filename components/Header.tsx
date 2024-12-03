@@ -18,7 +18,6 @@ export function Header() {
             alt="AutomatikLabs" 
             width={40} 
             height={40}
-            className="brightness-0 invert"
           />
         </Link>
         <nav>
