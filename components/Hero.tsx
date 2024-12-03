@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { useEffect, useRef, useState } from 'react'
 
 const stats = [
   { value: "100+ Milhões", label: "Mensagens trocadas" },
