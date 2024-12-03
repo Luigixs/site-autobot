@@ -1,7 +1,7 @@
 'use client'
 
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
-import { Play } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
@@ -24,33 +24,9 @@ const features = [
 ]
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  // Alterar o título da página ao montar o componente
-  useEffect(() => {
-    document.title = "Página Hero - BotConversa"; // Alterando o título da página
-
-    // Função de limpeza (caso queira restaurar o título ao desmontar)
-    return () => {
-      document.title = "Página Inicial"; // Título original quando o componente for desmontado
-    }
-  }, []); // O array vazio garante que isso será executado apenas uma vez, no mount
-
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing')
     pricingSection?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-      } else {
-        videoRef.current.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
   }
 
   return (
@@ -58,34 +34,12 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Em algum ponto da sua vida<br />
-            como empresário
+            Temos o funcionário ideal para você.
           </h1>
           
-          <div className="relative max-w-3xl mx-auto aspect-video bg-black/50 rounded-lg mb-8">
-            <video
-              ref={videoRef}
-              className="w-full h-full rounded-lg object-cover"
-              onClick={toggleVideo}
-            >
-              <source src="/O que é um robô.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {!isPlaying && (
-              <button 
-                className="absolute inset-0 flex items-center justify-center"
-                onClick={toggleVideo}
-              >
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-                  <Play className="w-8 h-8 text-white" />
-                </div>
-              </button>
-            )}
-          </div>
-
           <Button 
             onClick={scrollToPricing}
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full text-lg"
+            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 rounded-full text-lg mt-8"
           >
             Começar Agora
           </Button>
@@ -129,3 +83,4 @@ export function Hero() {
     </section>
   )
 }
+

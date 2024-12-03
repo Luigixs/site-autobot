@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">BotConversa</h3>
+            <h3 className="text-lg font-bold mb-4">AutomatikLabs</h3>
             <p className="text-sm">Automatizando conversas, conectando pessoas.</p>
           </div>
           <div>

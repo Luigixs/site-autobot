@@ -19,7 +19,7 @@ export function TrustAndFeatures() {
           <div className="flex items-center justify-center gap-3 mb-16">
             <div className="w-[40px] h-[40px] relative">
               <Image
-                src="/placeholder.svg"
+                src="/download.jpg"
                 alt="User Avatar"
                 width={40}
                 height={40}

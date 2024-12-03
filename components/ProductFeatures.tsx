@@ -8,14 +8,16 @@ export function ProductFeatures() {
         
         {/* Marketing e Vendas Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-          <div className="relative w-[400px] h-[400px] mx-auto">
-            <Image
-              src="/Marketing.png"
-              alt="Marketing de Conversa"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-lg object-cover"
-            />
+          <div className="relative w-full flex justify-center">
+            <div className="w-[300px] h-[500px] relative overflow-hidden rounded-lg shadow-xl">
+              <Image
+                src="/Marketing.png"
+                alt="Marketing de Conversa"
+                width={300}
+                height={500}
+                className="object-contain w-full h-full"
+              />
+            </div>
           </div>
           <div className="space-y-4">
             <p className="text-gray-600">Cresça seu negócio</p>
@@ -35,21 +37,23 @@ export function ProductFeatures() {
               Com a nossa interface visual com tecnologia "arraste e solte", você pode facilmente construir e automatizar conversas interativas para o WhatsApp que geram mais conversões e vendas para o seu negócio.
             </p>
           </div>
-          <div className="relative w-[400px] h-[400px] mx-auto order-1 md:order-2">
-            <div className="bg-white rounded-lg shadow-xl p-4 h-full">
-              <div className="bg-gray-50 rounded-lg p-4 h-full">
+          <div className="relative w-full flex justify-center order-1 md:order-2">
+            <div className="w-[300px] h-[500px] bg-white rounded-lg shadow-xl p-4">
+              <div className="bg-gray-50 rounded-lg p-4 h-full flex flex-col">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-2 h-2 bg-red-500 rounded-full" />
                   <div className="w-2 h-2 bg-yellow-500 rounded-full" />
                   <div className="w-2 h-2 bg-green-500 rounded-full" />
                 </div>
-                <Image
-                  src="/Flow-GIF.gif"
-                  alt="Interface do Bot"
-                  width={400}
-                  height={400}
-                  className="rounded-lg object-contain"
-                />
+                <div className="flex-grow relative overflow-hidden rounded-lg">
+                  <Image
+                    src="/Flow-GIF.gif"
+                    alt="Interface do Bot"
+                    width={400}
+                    height={400}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -57,14 +61,14 @@ export function ProductFeatures() {
 
         {/* Integração Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-[400px] h-[400px] mx-auto">
-            <div className="bg-[#ff4b03] rounded-lg p-12 flex items-center justify-center h-full">
+          <div className="relative w-full flex justify-center">
+            <div className="w-[300px] h-[500px] bg-[#ff4b03] rounded-lg shadow-xl overflow-hidden p-0 flex items-center justify-center">
               <Image
                 src="/integraçoes.gif"
                 alt="Logo Integração"
-                width={400}
-                height={400}
-                className="object-contain"
+                width={300}
+                height={500}
+                className="object-contain w-full h-full"
               />
             </div>
           </div>
