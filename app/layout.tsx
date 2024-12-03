@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'BotConversa',
-  description: 'Automatize seu atendimento com BotConversa',
+  title: 'AutomatikLabs',
+  description: 'Automatize seu atendimento com AutomatikLabs',
 }
 
 export default function RootLayout({
