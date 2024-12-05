@@ -40,7 +40,7 @@ const plans = [
       "Palavras Chave ilimitadas",
       "Sequências ilimitadas"
     ],
-    link: "https://chk.eduzz.com/39ZBPOOE9E"
+    link: "https://chk.eduzz.com/39ZBDKJB9E"
   },
   {
     name: "Mensal PRO",
@@ -59,7 +59,7 @@ const plans = [
       "API para desenvolvedores",
       "Webhook"
     ],
-    link: "https://chk.eduzz.com/E0DB4PPE91"
+    link: "https://chk.eduzz.com/E9OB2RKG0B"
   },
   {
     name: "Anual PRO",
@@ -79,7 +79,7 @@ const plans = [
       "API para desenvolvedores",
       "Webhook"
     ],
-    link: "https://chk.eduzz.com/39VJ2ZZ59R"
+    link: "https://chk.eduzz.com/39YBE47DWO"
   }
 ]
 
@@ -164,7 +164,7 @@ export function Pricing() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/image.png"
+                src="/garantia-7-dias.png"
                 alt="7 dias garantia ou seu dinheiro de volta"
                 width={200}
                 height={200}
